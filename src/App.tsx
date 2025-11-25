@@ -1,6 +1,5 @@
 import { Code2, Check, Star, Mail, ChevronDown, X, Shield } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import CostCalculator from './CostCalculator';
 import ProprietaryDevelopment from './ProprietaryDevelopment';
 import GuaranteeModal from './GuaranteeModal';
 
@@ -30,27 +29,35 @@ function App() {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'SaaS Development',
-      description: 'Full-stack candidate sourcing platform for recruiters — AI-powered matching, profile analysis, and automated outreach to scale hiring workflows.',
-      tags: ['Full-Stack', 'SaaS', 'AI Integration'],
+      title: 'Screen Share Videos',
+      description: 'Walkthrough of your product, software, or service in action. Perfect for demonstrating features, showing your platform, or explaining how something works step-by-step.',
+      tags: ['Product Demo', 'Software', 'Tutorial'],
       image: '/videoframe_18712.png',
       images: ['/videoframe_18712.png', '/Landing Page.png', '/Admin Control.png']
     },
     {
       id: 2,
-      title: 'Micro Tool Development',
-      description: 'Custom inventory management system — streamlining item tracking, business intake, and eliminating manual data entry across projects.',
-      tags: ['Make.com', 'CRM Integration', 'Automation'],
+      title: 'Explainer Videos',
+      description: 'Voiceover-driven breakdown of what you do and why it matters. Ideal for introducing your brand, clarifying your value proposition, or educating your audience.',
+      tags: ['Voiceover', 'Educational', 'Brand Story'],
       image: '/Inventory Tracker copy.png',
       images: ['/Inventory Tracker copy.png', '/Inventory Tracker.png', '/Admin Control.png']
     },
     {
       id: 3,
-      title: 'Portal Development',
-      description: 'Real-time analytics dashboard for logistics company — route tracking, performance metrics, and operational insights to optimize delivery efficiency.',
-      tags: ['React', 'Custom Portal', 'API Integration'],
+      title: 'UGC-Style Videos',
+      description: 'Selfie-cam, talking-head format that looks like a real person filmed it on their phone. Great for authentic testimonials, product reviews, or social proof.',
+      tags: ['Authentic', 'Social Media', 'Mobile-First'],
       image: '/Transport Portal copy.png',
       images: ['/Transport Portal copy.png', '/Transport Portal 2.PNG', '/Transport Portal.png']
+    },
+    {
+      id: 4,
+      title: 'Narrative/Character Videos',
+      description: 'Scripted story with AI-generated presenter or persona. Perfect for storytelling, brand messaging, or creating memorable characters for your campaigns.',
+      tags: ['AI Presenter', 'Storytelling', 'Brand Character'],
+      image: '/videoframe_18712.png',
+      images: ['/videoframe_18712.png', '/Landing Page.png', '/Admin Control.png']
     }
   ];
 
@@ -153,28 +160,28 @@ function App() {
 
   const faqs = [
     {
-      question: "How much does it cost to build an MVP?",
-      answer: "Traditional development agencies charge $50K-$100K and take 3-6 months. Our AI-powered approach delivers a launch-ready MVP in just 4 weeks for $9,500. For clients who want to expand beyond the MVP scope, total investment typically ranges $15K-$30K depending on additional features."
+      question: "What's the turnaround time for video production?",
+      answer: "The Holiday Ad Sprint delivers 3 videos in 7 days. The Q4 Campaign Ready package delivers 4 videos in 14 days. Both timelines start from project kickoff after your briefing call."
     },
     {
-      question: "How long does it take to build an app?",
-      answer: "We deliver fully functional MVPs in 4 weeks from kickoff to launch. Our AI-powered development process allows us to move significantly faster than traditional development teams while maintaining high quality standards."
+      question: "What video formats and deliverables do I receive?",
+      answer: "You'll receive all videos in multiple formats optimized for different platforms: MP4 (1080p HD), square format (1:1) for Instagram/Facebook feeds, vertical format (9:16) for Stories/Reels/TikTok, and landscape (16:9) for YouTube and web. All files include proper compression for fast loading."
     },
     {
-      question: "What happens after my MVP launches?",
-      answer: "After launch, we offer 2-week enhancement sprints at $4,500 for clients who want to iterate and expand their MVP based on user feedback. These revision cycles allow you to add features, improve UX, or scale functionality as your business grows."
+      question: "How many revision rounds are included?",
+      answer: "The Holiday Ad Sprint includes 1 revision round. The Q4 Campaign Ready package includes 2 revision rounds. Additional revisions can be added at $500 per round if needed."
     },
     {
-      question: "Do you offer ongoing support after launch?",
-      answer: "Yes. We provide ongoing support, maintenance, and iteration packages so your product continues to evolve as your user base grows and feedback comes in."
+      question: "Can I get videos faster than the standard delivery time?",
+      answer: "Yes, rush delivery is available for an additional fee. Contact us during your briefing to discuss expedited timelines and rush pricing for your specific project needs."
     },
     {
-      question: "What's included in the $9,500 MVP package?",
-      answer: "Your MVP includes a fully functional product with core features, user authentication and onboarding flow, database integration, responsive design, and basic API integrations. We handle strategy, design, development, and testing—everything needed for launch."
+      question: "Do you provide scripting services?",
+      answer: "Yes. The Holiday Ad Sprint includes script outlines for each video. The Q4 Campaign Ready package includes full scripting service with detailed scripts for all videos. We can also work from your existing scripts if you prefer."
     },
     {
-      question: "How do you build apps so quickly?",
-      answer: "We leverage cutting-edge AI development tools combined with proven frameworks and templates. This allows us to focus on your unique business logic and user experience rather than rebuilding common functionality from scratch."
+      question: "What happens after I receive my videos?",
+      answer: "You own the videos outright and can use them across any platform. If you need additional edits, more videos, or want to create variations for testing, we offer follow-up packages and can discuss ongoing video production needs."
     }
   ];
 
@@ -188,8 +195,7 @@ function App() {
           </h1>
           <button onClick={scrollToCalendar} className="bg-white hover:bg-slate-100 text-slate-900 font-semibold px-4 md:px-6 py-2 md:py-3 rounded-lg transition-all flex items-center gap-2 text-sm md:text-base">
             <Mail className="w-4 h-4" />
-            <span className="hidden sm:inline">Get in Touch</span>
-            <span className="sm:hidden">Contact</span>
+            <span>Book Your Briefing</span>
           </button>
         </div>
       </header>
@@ -199,46 +205,67 @@ function App() {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 md:px-6 py-2 mb-6 md:mb-8">
               <Code2 className="w-4 h-4 text-white" />
-              <span className="text-xs md:text-sm text-white">AI-Powered Development</span>
+              <span className="text-xs md:text-sm text-white">Video Creative Agency</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 md:mb-6 leading-tight" style={{ fontFamily: "'Libre Baskerville', serif" }}>
-              Build Your MVP in<br /><span className="italic">Just 4 Weeks</span>
+              Fast Turnaround Video Creative<br /><span className="italic">for Q4 Campaigns</span>
             </h1>
 
             <p className="text-base md:text-xl text-slate-300 mb-8 md:mb-10 leading-relaxed">
-              Fast-track your product from idea to launch with AI-powered development.
+              High-converting ad videos delivered in 7-14 days so you can capture holiday traffic before it's gone.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Logo Scroll Section */}
+      {/* Video Showcase Scroll Section */}
       <section className="py-8 md:py-12 bg-[#0a0f1a] overflow-hidden">
         <div className="relative">
           <div className="flex animate-scroll w-[4928px] md:w-[7252px]">
             {[...Array(2)].map((_, setIndex) => (
               <div key={setIndex} className="flex shrink-0">
-                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-slate-800/30 border border-slate-700/50 rounded-lg p-2 overflow-hidden mr-6">
-                  <img src="/Admin Control.png" alt="Admin Control Dashboard" className="w-full h-full object-contain" />
+                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-lg p-8 overflow-hidden mr-6 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-4xl mb-3">🎬</div>
+                    <p className="text-slate-300 font-semibold">UGC-Style Video</p>
+                  </div>
                 </div>
-                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-slate-800/30 border border-slate-700/50 rounded-lg p-2 overflow-hidden mr-6">
-                  <img src="/Landing Page.png" alt="Landing Page" className="w-full h-full object-contain" />
+                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-lg p-8 overflow-hidden mr-6 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-4xl mb-3">🖥️</div>
+                    <p className="text-slate-300 font-semibold">Screen Share Demo</p>
+                  </div>
                 </div>
-                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-slate-800/30 border border-slate-700/50 rounded-lg p-2 overflow-hidden mr-6">
-                  <img src="/Super-Recruiter-AI-Powered-Candidate-Sourcing.png" alt="Super Recruiter Platform" className="w-full h-full object-contain" />
+                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-lg p-8 overflow-hidden mr-6 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-4xl mb-3">📊</div>
+                    <p className="text-slate-300 font-semibold">Explainer Video</p>
+                  </div>
                 </div>
-                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-slate-800/30 border border-slate-700/50 rounded-lg p-2 overflow-hidden mr-6">
-                  <img src="/videoframe_18712.png" alt="Platform Demo" className="w-full h-full object-contain" />
+                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-lg p-8 overflow-hidden mr-6 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-4xl mb-3">🎭</div>
+                    <p className="text-slate-300 font-semibold">Narrative/Character</p>
+                  </div>
                 </div>
-                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-slate-800/30 border border-slate-700/50 rounded-lg p-2 overflow-hidden mr-6">
-                  <img src="/Inventory Tracker.png" alt="Inventory Tracker" className="w-full h-full object-contain" />
+                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-lg p-8 overflow-hidden mr-6 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-4xl mb-3">✨</div>
+                    <p className="text-slate-300 font-semibold">Motion Graphics</p>
+                  </div>
                 </div>
-                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-slate-800/30 border border-slate-700/50 rounded-lg p-2 overflow-hidden mr-6">
-                  <img src="/Transport Portal.png" alt="Transport Portal" className="w-full h-full object-contain" />
+                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-lg p-8 overflow-hidden mr-6 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-4xl mb-3">🎯</div>
+                    <p className="text-slate-300 font-semibold">Product Demo</p>
+                  </div>
                 </div>
-                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-slate-800/30 border border-slate-700/50 rounded-lg p-2 overflow-hidden mr-6">
-                  <img src="/Bank-Statement-Comparison-Tool-Compare-Spending-Instantly.png" alt="Bank Statement Comparison Tool" className="w-full h-full object-contain" />
+                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-lg p-8 overflow-hidden mr-6 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-4xl mb-3">💬</div>
+                    <p className="text-slate-300 font-semibold">Testimonial Video</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -256,57 +283,57 @@ function App() {
           </div>
 
           <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 md:gap-8">
-            {/* Step 1: Scope */}
+            {/* Step 1: Brief & Strategy */}
             <div className={`bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 md:p-8 hover:border-white/20 transition-all ${processVisible ? 'animate-fadeInUp' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
               <div className="mb-4">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-white/10 border border-white/20 mb-4">
                   <span className="text-2xl font-bold text-white">1</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: "'Libre Baskerville', serif" }}>
-                  <span className="italic">Scope</span>
+                  <span className="italic">Brief & Strategy</span>
                 </h3>
                 <p className="text-lg font-semibold text-white mb-3">
-                  Define what matters most
+                  Understand your campaign goals
                 </p>
               </div>
               <p className="text-slate-300 leading-relaxed">
-                We cut through feature bloat and identify the core functionality that will validate your idea fastest.
+                We dig into your target audience, campaign objectives, and key messaging to craft videos that convert.
               </p>
             </div>
 
-            {/* Step 2: Ship */}
+            {/* Step 2: Production & Editing */}
             <div className={`bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 md:p-8 hover:border-white/20 transition-all ${processVisible ? 'animate-fadeInUp' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
               <div className="mb-4">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-white/10 border border-white/20 mb-4">
                   <span className="text-2xl font-bold text-white">2</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: "'Libre Baskerville', serif" }}>
-                  <span className="italic">Ship</span>
+                  <span className="italic">Production & Editing</span>
                 </h3>
                 <p className="text-lg font-semibold text-white mb-3">
-                  Launch in 4 weeks, not 4 months
+                  Fast, polished video creation
                 </p>
               </div>
               <p className="text-slate-300 leading-relaxed">
-                AI-powered development means we move at startup speed — you get a working product while your competitors are still writing specs.
+                Scripts, voiceovers, editing, and motion graphics — all delivered with speed and precision to meet your Q4 deadlines.
               </p>
             </div>
 
-            {/* Step 3: Scale */}
+            {/* Step 3: Deliver & Revise */}
             <div className={`bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 md:p-8 hover:border-white/20 transition-all ${processVisible ? 'animate-fadeInUp' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
               <div className="mb-4">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-white/10 border border-white/20 mb-4">
                   <span className="text-2xl font-bold text-white">3</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: "'Libre Baskerville', serif" }}>
-                  <span className="italic">Scale</span>
+                  <span className="italic">Deliver & Revise</span>
                 </h3>
                 <p className="text-lg font-semibold text-white mb-3">
-                  Iterate based on real data
+                  Launch-ready assets on time
                 </p>
               </div>
               <p className="text-slate-300 leading-relaxed">
-                Once you're live, we help you prioritize what to build next based on actual user behavior, not assumptions.
+                Get your videos in all the formats you need, with revision rounds included to ensure they're campaign-ready.
               </p>
             </div>
           </div>
@@ -324,11 +351,11 @@ function App() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {projects.map((project, index) => {
               let animationClass = 'animate-fadeIn';
               if (index === 0) animationClass = 'animate-fadeInSlideRight';
-              else if (index === 2) animationClass = 'animate-fadeInSlideLeft';
+              else if (index === 3) animationClass = 'animate-fadeInSlideLeft';
 
               return (
                 <div
@@ -345,12 +372,22 @@ function App() {
                     />
                   </div>
                   <div className="p-6 md:p-8">
-                    <h3 className="text-2xl md:text-3xl mb-3" style={{ fontFamily: "'Libre Baskerville', serif" }}>
+                    <h3 className="text-xl md:text-2xl mb-3" style={{ fontFamily: "'Libre Baskerville', serif" }}>
                       <span className="italic">{project.title}</span>
                     </h3>
-                    <p className="text-slate-300 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
+                    <p className="text-slate-300 mb-4 leading-relaxed text-sm">
                       {project.description}
                     </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-2 py-1 bg-white/5 border border-white/10 text-slate-300 rounded-full text-xs"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               );
@@ -359,21 +396,100 @@ function App() {
         </div>
       </section>
 
-      {/* Calculator Section */}
+
+      {/* Who This Is For Section */}
       <section className="py-12 md:py-24 bg-[#0a0f1a]">
-        <div className="max-w-5xl mx-auto px-4 md:px-6">
-          <div className="text-center mb-8 md:mb-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="text-center mb-10 md:mb-16">
             <h2 className="text-3xl md:text-5xl mb-4" style={{ fontFamily: "'Libre Baskerville', serif" }}>
-              <span className="italic">Calculate Your Return</span>
+              <span className="italic">Who This Is For</span>
             </h2>
           </div>
-          <CostCalculator />
+
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 hover:border-white/20 transition-all">
+              <div className="text-4xl mb-4">🛒</div>
+              <h3 className="text-xl font-semibold text-white mb-3">E-commerce Brands</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Launching holiday campaigns and need high-quality video ads fast to capture Q4 traffic.
+              </p>
+            </div>
+
+            <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 hover:border-white/20 transition-all">
+              <div className="text-4xl mb-4">💻</div>
+              <h3 className="text-xl font-semibold text-white mb-3">SaaS & Tech Companies</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                With year-end ad budgets to spend and need video creative before agencies book up.
+              </p>
+            </div>
+
+            <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 hover:border-white/20 transition-all">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Coaches & Consultants</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Running Q4 promos and need professional video assets to stand out in crowded feeds.
+              </p>
+            </div>
+
+            <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 hover:border-white/20 transition-all">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Busy Founders</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Who need assets fast—agencies are booked through January and you can't wait.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Now Section */}
+      <section className="py-12 md:py-24 bg-[#0a0f1a]">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-3xl md:text-5xl mb-4" style={{ fontFamily: "'Libre Baskerville', serif" }}>
+              <span className="italic">Why Now</span>
+            </h2>
+          </div>
+
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-xl p-6 md:p-8">
+              <div className="text-3xl mb-3">📈</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Q4 Ad Costs Peak Dec 15-25</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Get your campaigns live before CPMs spike. The earlier you launch, the more efficient your spend.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-xl p-6 md:p-8">
+              <div className="text-3xl mb-3">💰</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Use-It-or-Lose-It Budgets</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Marketing dollars expire Dec 31. Deploy them now on video creative that drives results.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-xl p-6 md:p-8">
+              <div className="text-3xl mb-3">🎯</div>
+              <h3 className="text-xl font-semibold text-white mb-3">One Converting Video Pays for Itself</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                A single ad that hits can 10x this investment. The ROI potential far outweighs the cost.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-xl p-6 md:p-8">
+              <div className="text-3xl mb-3">⏰</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Limited December Slots</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Taking 2-3 projects max. Once they're filled, this closes until January.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-12 md:py-24 bg-[#0a0f1a] overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <section className="py-12 md:py-24 bg-[#0a0f1a]">
+        <div className="max-w-5xl mx-auto px-4 md:px-6">
           <div className="text-center mb-8 md:mb-16">
             <h2 className="text-3xl md:text-5xl mb-4" style={{ fontFamily: "'Libre Baskerville', serif" }}>
               <span className="italic">What Our Clients Say</span>
@@ -381,91 +497,37 @@ function App() {
             <p className="text-slate-400 text-base md:text-lg">Trusted by founders and growing teams</p>
           </div>
 
-          <div className="relative">
-            <div className="md:flex md:animate-scroll-slow md:gap-6 space-y-4 md:space-y-0">
-              {[...Array(2)].map((_, setIndex) => (
-                <div key={setIndex} className="md:flex md:gap-6 md:shrink-0 space-y-4 md:space-y-0">
-                  {/* Testimonial 1 */}
-                  <div className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-xl p-6 md:p-8 hover:border-white/20 transition-all md:w-96 md:shrink-0">
-                    <div className="flex gap-1 mb-3 md:mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-white text-white" />
-                      ))}
-                    </div>
-                    <p className="text-slate-300 leading-relaxed mb-4 md:mb-6 italic text-sm md:text-base">
-                      "Frank is amazing. He helped us diagnose which parts of our business we should automate and in what order so that we can receive the most value for our money upfront. He is an amazing communicator and we look forward to partnering with him for all our future automation needs!"
-                    </p>
-                    <div>
-                      <p className="font-semibold text-white text-sm md:text-base">Sargis Ivanov</p>
-                      <p className="text-xs md:text-sm text-slate-400">Logistics Manager</p>
-                    </div>
-                  </div>
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+            {/* Testimonial - Alex */}
+            <div className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-xl p-6 md:p-8 hover:border-white/20 transition-all">
+              <div className="flex gap-1 mb-3 md:mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-white text-white" />
+                ))}
+              </div>
+              <p className="text-slate-300 leading-relaxed mb-4 md:mb-6 italic text-sm md:text-base">
+                "Absolute GREAT experience with Frank. Go with Frank, you won't be disappointed."
+              </p>
+              <div>
+                <p className="font-semibold text-white text-sm md:text-base">Alex Papageorge</p>
+                <p className="text-xs md:text-sm text-slate-400">Recruiting Firm CEO</p>
+              </div>
+            </div>
 
-                  {/* Testimonial 2 */}
-                  <div className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-xl p-6 md:p-8 hover:border-white/20 transition-all md:w-96 md:shrink-0">
-                    <div className="flex gap-1 mb-3 md:mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-white text-white" />
-                      ))}
-                    </div>
-                    <p className="text-slate-300 leading-relaxed mb-4 md:mb-6 italic text-sm md:text-base">
-                      "Absolute GREAT experience with Frank. Go with Frank, you won't be disappointed."
-                    </p>
-                    <div>
-                      <p className="font-semibold text-white text-sm md:text-base">Alex Papageorge</p>
-                      <p className="text-xs md:text-sm text-slate-400">Recruiting Firm CEO</p>
-                    </div>
-                  </div>
-
-                  {/* Testimonial 3 */}
-                  <div className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-xl p-6 md:p-8 hover:border-white/20 transition-all md:w-96 md:shrink-0">
-                    <div className="flex gap-1 mb-3 md:mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-white text-white" />
-                      ))}
-                    </div>
-                    <p className="text-slate-300 leading-relaxed mb-4 md:mb-6 italic text-sm md:text-base">
-                      "Hire him. You won't be sorry. Literally saves us at least 20 hours a week and we can now reallocate that time to other tasks as opposed to hiring another employee. My employees are excited because their jobs have been made exponentially easier. Frank is a resourceful expert in his field. Highly recommended."
-                    </p>
-                    <div>
-                      <p className="font-semibold text-white text-sm md:text-base">Dawn Rucinski</p>
-                      <p className="text-xs md:text-sm text-slate-400">Seller's Agent</p>
-                    </div>
-                  </div>
-
-                  {/* Testimonial 4 */}
-                  <div className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-xl p-6 md:p-8 hover:border-white/20 transition-all md:w-96 md:shrink-0">
-                    <div className="flex gap-1 mb-3 md:mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-white text-white" />
-                      ))}
-                    </div>
-                    <p className="text-slate-300 leading-relaxed mb-4 md:mb-6 italic text-sm md:text-base">
-                      "Frank is unbelievable at his job and his talent is worth every cent. Very great communication, quick turnaround time, and willing to do whatever is needed to get the job done. Will be working together long into the future. Highly recommended."
-                    </p>
-                    <div>
-                      <p className="font-semibold text-white text-sm md:text-base">Mason Kuhr</p>
-                      <p className="text-xs md:text-sm text-slate-400">Supplement Brand Owner</p>
-                    </div>
-                  </div>
-
-                  {/* Testimonial 5 */}
-                  <div className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-xl p-6 md:p-8 hover:border-white/20 transition-all md:w-96 md:shrink-0">
-                    <div className="flex gap-1 mb-3 md:mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-white text-white" />
-                      ))}
-                    </div>
-                    <p className="text-slate-300 leading-relaxed mb-4 md:mb-6 italic text-sm md:text-base">
-                      "Frank is well versed in Sales, Marketing, Automation & AI, Management. He's a well-rounded business athlete. I not only appreciated the quality of Frank's output but also his perspective and advice on many business situations. He's a star. I will surely work with Frank again very soon."
-                    </p>
-                    <div>
-                      <p className="font-semibold text-white text-sm md:text-base">Ben Moore</p>
-                      <p className="text-xs md:text-sm text-slate-400">SaaS Founder</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+            {/* Testimonial - Mason */}
+            <div className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-xl p-6 md:p-8 hover:border-white/20 transition-all">
+              <div className="flex gap-1 mb-3 md:mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-white text-white" />
+                ))}
+              </div>
+              <p className="text-slate-300 leading-relaxed mb-4 md:mb-6 italic text-sm md:text-base">
+                "Frank is unbelievable at his job and his talent is worth every cent. Very great communication, quick turnaround time, and willing to do whatever is needed to get the job done. Will be working together long into the future. Highly recommended."
+              </p>
+              <div>
+                <p className="font-semibold text-white text-sm md:text-base">Mason Kuhr</p>
+                <p className="text-xs md:text-sm text-slate-400">Supplement Brand Owner</p>
+              </div>
             </div>
           </div>
         </div>
@@ -480,61 +542,105 @@ function App() {
             </h2>
           </div>
 
-          <div className="max-w-2xl mx-auto">
-            {/* MVP Development Package */}
-            <div className="bg-slate-800/50 backdrop-blur border-2 border-white/50 rounded-xl md:rounded-2xl p-6 md:p-10 relative text-center">
-              <div className="mb-6 md:mb-8">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 md:gap-8">
+            {/* Package 1: Holiday Ad Sprint */}
+            <div className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-xl md:rounded-2xl p-6 md:p-8 hover:border-white/30 transition-all">
+              <div className="mb-6">
                 <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: "'Libre Baskerville', serif" }}>
-                  <span className="italic">MVP Development</span>
+                  <span className="italic">Holiday Ad Sprint</span>
                 </h3>
-                <p className="text-slate-400 mb-4 md:mb-6 text-sm md:text-base">
-                  In 4-weeks you'll have a full working product ready to launch to the world.
+                <p className="text-slate-400 mb-4 text-sm md:text-base">
+                  Fast video creative for immediate campaign needs
                 </p>
-                <div className="flex items-baseline gap-2 justify-center">
-                  <span className="text-4xl md:text-5xl font-bold">$9,500</span>
-                  <span className="text-slate-400 text-sm md:text-base">/ One-time</span>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-4xl md:text-5xl font-bold">$2,500</span>
                 </div>
               </div>
 
-              <button onClick={scrollToCalendar} className="w-full bg-white hover:bg-slate-100 text-slate-900 font-semibold py-3 md:py-4 rounded-lg transition-all mb-6 md:mb-8 text-sm md:text-base">
-                Get Started Today
+              <button onClick={scrollToCalendar} className="w-full bg-white hover:bg-slate-100 text-slate-900 font-semibold py-3 rounded-lg transition-all mb-6 text-sm md:text-base">
+                Book Your Briefing
               </button>
 
-              <div className="space-y-3 md:space-y-4 max-w-md mx-auto">
-                <p className="font-semibold text-slate-300 mb-3 md:mb-4 text-sm md:text-base text-center">What's included:</p>
+              <div className="space-y-3">
+                <p className="font-semibold text-white mb-3 text-sm md:text-base">What's included:</p>
                 {[
-                  'Functional MVP',
-                  'Database setup',
-                  'API integrations',
-                  'User authentication',
-                  'Design components',
-                  '24-hour email response time',
-                  'Weekly progress updates'
+                  '3 videos (up to 45 seconds each)',
+                  'Screen share walkthrough',
+                  'Explainer with voiceover',
+                  'Script outline included',
+                  'Professional voiceover',
+                  'Polished edit & export',
+                  '1 revision round',
+                  '7-day delivery'
                 ].map((feature, index) => (
-                  <div key={index} className="flex items-start gap-2 md:gap-3 justify-center">
+                  <div key={index} className="flex items-start gap-2">
                     <Check className="w-4 h-4 md:w-5 md:h-5 text-white flex-shrink-0 mt-0.5" />
-                    <span className="text-slate-300 text-sm md:text-base">{feature}</span>
+                    <span className="text-slate-300 text-sm">{feature}</span>
                   </div>
                 ))}
               </div>
             </div>
 
+            {/* Package 2: Q4 Campaign Ready */}
+            <div className="bg-slate-800/50 backdrop-blur border-2 border-white/50 rounded-xl md:rounded-2xl p-6 md:p-8 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-white text-slate-900 px-4 py-1 rounded-full text-xs font-semibold">POPULAR</span>
+              </div>
+              <div className="mb-6">
+                <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: "'Libre Baskerville', serif" }}>
+                  <span className="italic">Q4 Campaign Ready</span>
+                </h3>
+                <p className="text-slate-400 mb-4 text-sm md:text-base">
+                  Complete video package for your Q4 campaigns
+                </p>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-4xl md:text-5xl font-bold">$4,500</span>
+                </div>
+              </div>
+
+              <button onClick={scrollToCalendar} className="w-full bg-white hover:bg-slate-100 text-slate-900 font-semibold py-3 rounded-lg transition-all mb-6 text-sm md:text-base">
+                Book Your Briefing
+              </button>
+
+              <div className="space-y-3">
+                <p className="font-semibold text-white mb-3 text-sm md:text-base">What's included:</p>
+                {[
+                  '4 videos (up to 45 seconds each)',
+                  'UGC-style authentic videos',
+                  'Narrative/character storytelling',
+                  'Full scripting service',
+                  'AI voiceover integration',
+                  'Motion graphics & logo animation',
+                  '2 revision rounds',
+                  '14-day delivery'
+                ].map((feature, index) => (
+                  <div key={index} className="flex items-start gap-2">
+                    <Check className="w-4 h-4 md:w-5 md:h-5 text-white flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-300 text-sm">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="max-w-5xl mx-auto mt-8 md:mt-12">
+
             {/* Guarantee Box */}
-            <div className="mt-8 md:mt-12 bg-slate-800/30 backdrop-blur border border-slate-700/50 rounded-xl md:rounded-2xl p-6 md:p-8 text-center">
+            <div className="bg-slate-800/30 backdrop-blur border border-slate-700/50 rounded-xl md:rounded-2xl p-6 md:p-8 text-center">
               <div className="flex items-start gap-3 md:gap-4 mb-4 justify-center">
                 <Shield className="w-6 h-6 md:w-8 md:h-8 text-white flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl md:text-2xl font-semibold mb-4">Backed by Our Guarantee.</h3>
+                  <h3 className="text-xl md:text-2xl font-semibold mb-4">Delivery Guarantee</h3>
                 </div>
               </div>
 
               <p className="text-slate-300 font-semibold mb-3 text-sm md:text-base text-center">Every project includes:</p>
               <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 max-w-md mx-auto">
                 {[
-                  'Written scope with clear deliverables',
-                  '4-week delivery commitment',
-                  'Functional features that meet acceptance criteria',
-                  'Full guarantee backing our work'
+                  'Clear scope and deliverables',
+                  'On-time delivery commitment',
+                  'Revision rounds as specified',
+                  'Launch-ready video files'
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-2 md:gap-3 justify-center">
                     <Check className="w-4 h-4 md:w-5 md:h-5 text-white flex-shrink-0 mt-0.5" />
@@ -544,7 +650,7 @@ function App() {
               </div>
 
               <p className="text-slate-300 mb-3 md:mb-4 text-sm md:text-base">
-                Not a satisfaction guarantee—a delivery guarantee.<br />We commit to shipping what we scope, on time.
+                We deliver what we promise, on schedule.<br />Your videos will be campaign-ready by your deadline.
               </p>
 
               <button
@@ -603,10 +709,10 @@ function App() {
       <section className="pt-12 md:pt-24 pb-6 md:pb-8 bg-[#0a0f1a]">
         <div className="max-w-4xl mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-5xl mb-4 md:mb-6" style={{ fontFamily: "'Libre Baskerville', serif" }}>
-            <span className="italic">Ready to Build?</span>
+            <span className="italic">Ready to Get Started?</span>
           </h2>
           <p className="text-base md:text-xl text-slate-300 mb-6 md:mb-8">
-            Book a call to discuss your project and get started within days.
+            Book your briefing call to discuss your Q4 campaigns and get started.
           </p>
         </div>
       </section>

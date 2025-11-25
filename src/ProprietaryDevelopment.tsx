@@ -22,12 +22,17 @@ function ProprietaryDevelopment() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,transparent_40%,rgba(10,15,26,0.4)_70%,rgba(10,15,26,0.8)_100%)]" />
 
             <div className="absolute inset-0 flex items-center justify-center">
-              <h2
-                className="text-3xl md:text-5xl lg:text-6xl text-white text-center px-4 italic"
-                style={{ fontFamily: "'Libre Baskerville', serif", textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 8px rgba(0, 0, 0, 0.6)' }}
-              >
-                Own Your Code
-              </h2>
+              <div className="text-center px-4">
+                <h2
+                  className="text-3xl md:text-5xl lg:text-6xl text-white italic mb-4"
+                  style={{ fontFamily: "'Libre Baskerville', serif", textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 8px rgba(0, 0, 0, 0.6)' }}
+                >
+                  High-Converting Creative
+                </h2>
+                <p className="text-lg md:text-2xl text-slate-200" style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.8)' }}>
+                  Polished. Fast. Built to convert.
+                </p>
+              </div>
             </div>
           </div>
         </div>
