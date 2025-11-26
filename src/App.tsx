@@ -1,4 +1,4 @@
-import { Code2, Check, Star, Mail, ChevronDown, X, Shield } from 'lucide-react';
+import { Code2, Check, Star, Mail, ChevronDown, X, Shield, ShoppingCart, Laptop, Target, Rocket, TrendingUp, DollarSign, Zap, Clock } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import ProprietaryDevelopment from './ProprietaryDevelopment';
 import GuaranteeModal from './GuaranteeModal';
@@ -408,7 +408,9 @@ function App() {
 
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 hover:border-white/20 transition-all">
-              <div className="text-4xl mb-4">🛒</div>
+              <div className="mb-4">
+                <ShoppingCart className="w-10 h-10 text-white" />
+              </div>
               <h3 className="text-xl font-semibold text-white mb-3">E-commerce Brands</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
                 Launching holiday campaigns and need high-quality video ads fast to capture Q4 traffic.
@@ -416,7 +418,9 @@ function App() {
             </div>
 
             <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 hover:border-white/20 transition-all">
-              <div className="text-4xl mb-4">💻</div>
+              <div className="mb-4">
+                <Laptop className="w-10 h-10 text-white" />
+              </div>
               <h3 className="text-xl font-semibold text-white mb-3">SaaS & Tech Companies</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
                 With year-end ad budgets to spend and need video creative before agencies book up.
@@ -424,7 +428,9 @@ function App() {
             </div>
 
             <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 hover:border-white/20 transition-all">
-              <div className="text-4xl mb-4">🎯</div>
+              <div className="mb-4">
+                <Target className="w-10 h-10 text-white" />
+              </div>
               <h3 className="text-xl font-semibold text-white mb-3">Coaches & Consultants</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
                 Running Q4 promos and need professional video assets to stand out in crowded feeds.
@@ -432,7 +438,9 @@ function App() {
             </div>
 
             <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 hover:border-white/20 transition-all">
-              <div className="text-4xl mb-4">🚀</div>
+              <div className="mb-4">
+                <Rocket className="w-10 h-10 text-white" />
+              </div>
               <h3 className="text-xl font-semibold text-white mb-3">Busy Founders</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
                 Who need assets fast—agencies are booked through January and you can't wait.
@@ -453,7 +461,9 @@ function App() {
 
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-xl p-6 md:p-8">
-              <div className="text-3xl mb-3">📈</div>
+              <div className="mb-3">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
               <h3 className="text-xl font-semibold text-white mb-3">Q4 Ad Costs Peak Dec 15-25</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
                 Get your campaigns live before CPMs spike. The earlier you launch, the more efficient your spend.
@@ -461,7 +471,9 @@ function App() {
             </div>
 
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-xl p-6 md:p-8">
-              <div className="text-3xl mb-3">💰</div>
+              <div className="mb-3">
+                <DollarSign className="w-8 h-8 text-white" />
+              </div>
               <h3 className="text-xl font-semibold text-white mb-3">Use-It-or-Lose-It Budgets</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
                 Marketing dollars expire Dec 31. Deploy them now on video creative that drives results.
@@ -469,7 +481,9 @@ function App() {
             </div>
 
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-xl p-6 md:p-8">
-              <div className="text-3xl mb-3">🎯</div>
+              <div className="mb-3">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
               <h3 className="text-xl font-semibold text-white mb-3">One Converting Video Pays for Itself</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
                 A single ad that hits can 10x this investment. The ROI potential far outweighs the cost.
@@ -477,7 +491,9 @@ function App() {
             </div>
 
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-xl p-6 md:p-8">
-              <div className="text-3xl mb-3">⏰</div>
+              <div className="mb-3">
+                <Clock className="w-8 h-8 text-white" />
+              </div>
               <h3 className="text-xl font-semibold text-white mb-3">Limited December Slots</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
                 Taking 2-3 projects max. Once they're filled, this closes until January.
@@ -543,14 +559,14 @@ function App() {
           </div>
 
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 md:gap-8">
-            {/* Package 1: Holiday Ad Sprint */}
+            {/* Package 1: Small Batch */}
             <div className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-xl md:rounded-2xl p-6 md:p-8 hover:border-white/30 transition-all">
               <div className="mb-6">
                 <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: "'Libre Baskerville', serif" }}>
-                  <span className="italic">Holiday Ad Sprint</span>
+                  <span className="italic">Small Batch</span>
                 </h3>
                 <p className="text-slate-400 mb-4 text-sm md:text-base">
-                  Fast video creative for immediate campaign needs
+                  3 core assets • 7-day delivery
                 </p>
                 <div className="flex items-baseline gap-2">
                   <span className="text-4xl md:text-5xl font-bold">$2,500</span>
@@ -581,17 +597,17 @@ function App() {
               </div>
             </div>
 
-            {/* Package 2: Q4 Campaign Ready */}
+            {/* Package 2: Big Bundle */}
             <div className="bg-slate-800/50 backdrop-blur border-2 border-white/50 rounded-xl md:rounded-2xl p-6 md:p-8 relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <span className="bg-white text-slate-900 px-4 py-1 rounded-full text-xs font-semibold">POPULAR</span>
               </div>
               <div className="mb-6">
                 <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: "'Libre Baskerville', serif" }}>
-                  <span className="italic">Q4 Campaign Ready</span>
+                  <span className="italic">Big Bundle</span>
                 </h3>
                 <p className="text-slate-400 mb-4 text-sm md:text-base">
-                  Complete video package for your Q4 campaigns
+                  4 core assets • 14-day delivery
                 </p>
                 <div className="flex items-baseline gap-2">
                   <span className="text-4xl md:text-5xl font-bold">$4,500</span>
