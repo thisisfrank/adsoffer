@@ -32,8 +32,8 @@ function App() {
       title: 'Screen Share Videos',
       description: 'Walkthrough of your product, software, or service in action. Perfect for demonstrating features, showing your platform, or explaining how something works step-by-step.',
       tags: ['Product Demo', 'Software', 'Tutorial'],
-      image: '/videoframe_18712.png',
-      images: ['/videoframe_18712.png', '/Landing Page.png', '/Admin Control.png']
+      image: '/Shortlist Promo Lofi Audio.mp4',
+      images: ['/Shortlist Promo Lofi Audio.mp4', '/videoframe_18712.png', '/Landing Page.png', '/Admin Control.png']
     },
     {
       id: 2,
@@ -365,11 +365,22 @@ function App() {
                   style={{ animationDelay: '0.2s' }}
                 >
                   <div className="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center border-b border-slate-700/50 overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                    />
+                    {project.image.endsWith('.mp4') ? (
+                      <video
+                        src={project.image}
+                        className="w-full h-full object-cover"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      />
+                    ) : (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+                    )}
                   </div>
                   <div className="p-6 md:p-8">
                     <h3 className="text-xl md:text-2xl mb-3" style={{ fontFamily: "'Libre Baskerville', serif" }}>
@@ -799,11 +810,22 @@ function App() {
 
             <div className="md:w-2/3 overflow-hidden relative flex flex-col">
               <div className="flex-1 overflow-hidden">
-                <img
-                  src={selectedProject.images[currentImageIndex]}
-                  alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
-                  className="w-full h-full object-cover"
-                />
+                {selectedProject.images[currentImageIndex].endsWith('.mp4') ? (
+                  <video
+                    src={selectedProject.images[currentImageIndex]}
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
+                ) : (
+                  <img
+                    src={selectedProject.images[currentImageIndex]}
+                    alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                )}
               </div>
 
               <div className="flex justify-center gap-2 py-4 bg-[#0f1419]">
