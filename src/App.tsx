@@ -36,14 +36,6 @@ function App() {
       images: ['/Shortlist Promo Lofi Audio.mp4']
     },
     {
-      id: 2,
-      title: 'Explainer Videos',
-      description: 'Voiceover-driven breakdown of what you do and why it matters. Ideal for introducing your brand, clarifying your value proposition, or educating your audience.',
-      tags: ['Voiceover', 'Educational', 'Brand Story'],
-      image: '/Inventory Tracker copy.png',
-      images: ['/Inventory Tracker copy.png']
-    },
-    {
       id: 3,
       title: 'UGC-Style Videos',
       description: 'Selfie-cam, talking-head format that looks like a real person filmed it on their phone. Great for authentic testimonials, product reviews, or social proof.',
@@ -219,60 +211,6 @@ function App() {
         </div>
       </section>
 
-      {/* Video Showcase Scroll Section */}
-      <section className="py-8 md:py-12 bg-[#0a0f1a] overflow-hidden">
-        <div className="relative">
-          <div className="flex animate-scroll w-[4928px] md:w-[7252px]">
-            {[...Array(2)].map((_, setIndex) => (
-              <div key={setIndex} className="flex shrink-0">
-                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-lg p-8 overflow-hidden mr-6 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-4xl mb-3">🎬</div>
-                    <p className="text-slate-300 font-semibold">UGC-Style Video</p>
-                  </div>
-                </div>
-                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-lg p-8 overflow-hidden mr-6 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-4xl mb-3">🖥️</div>
-                    <p className="text-slate-300 font-semibold">Screen Share Demo</p>
-                  </div>
-                </div>
-                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-lg p-8 overflow-hidden mr-6 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-4xl mb-3">📊</div>
-                    <p className="text-slate-300 font-semibold">Explainer Video</p>
-                  </div>
-                </div>
-                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-lg p-8 overflow-hidden mr-6 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-4xl mb-3">🎭</div>
-                    <p className="text-slate-300 font-semibold">Narrative/Character</p>
-                  </div>
-                </div>
-                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-lg p-8 overflow-hidden mr-6 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-4xl mb-3">✨</div>
-                    <p className="text-slate-300 font-semibold">Motion Graphics</p>
-                  </div>
-                </div>
-                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-lg p-8 overflow-hidden mr-6 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-4xl mb-3">🎯</div>
-                    <p className="text-slate-300 font-semibold">Product Demo</p>
-                  </div>
-                </div>
-                <div className="shrink-0 w-80 h-48 md:w-[500px] md:h-[280px] bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-lg p-8 overflow-hidden mr-6 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-4xl mb-3">💬</div>
-                    <p className="text-slate-300 font-semibold">Testimonial Video</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Our Process Section */}
       <section id="process-section" className="py-12 md:py-24 bg-[#0a0f1a]">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
@@ -351,11 +289,11 @@ function App() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {projects.map((project, index) => {
               let animationClass = 'animate-fadeIn';
               if (index === 0) animationClass = 'animate-fadeInSlideRight';
-              else if (index === 3) animationClass = 'animate-fadeInSlideLeft';
+              else if (index === 2) animationClass = 'animate-fadeInSlideLeft';
 
               return (
                 <div
