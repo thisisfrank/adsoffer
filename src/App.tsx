@@ -278,8 +278,6 @@ function App() {
         </div>
       </section>
 
-      <ProprietaryDevelopment />
-
       {/* Case Studies / Portfolio Section */}
       <section id="projects-section" className="py-12 md:py-24 bg-[#0a0f1a]">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
