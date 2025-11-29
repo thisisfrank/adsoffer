@@ -211,67 +211,53 @@ function App() {
         </div>
       </section>
 
-      {/* Our Process Section */}
-      <section id="process-section" className="py-12 md:py-24 bg-[#0a0f1a]">
+      {/* Who This Is For Section */}
+      <section className="py-12 md:py-24 bg-[#0a0f1a]">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="text-center mb-10 md:mb-16">
             <h2 className="text-3xl md:text-5xl mb-4" style={{ fontFamily: "'Libre Baskerville', serif" }}>
-              <span className="italic">Our Process</span>
+              <span className="italic">Who This Is For</span>
             </h2>
           </div>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 md:gap-8">
-            {/* Step 1: Brief & Strategy */}
-            <div className={`bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 md:p-8 hover:border-white/20 transition-all ${processVisible ? 'animate-fadeInUp' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 hover:border-white/20 transition-all">
               <div className="mb-4">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-white/10 border border-white/20 mb-4">
-                  <span className="text-2xl font-bold text-white">1</span>
-                </div>
-                <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: "'Libre Baskerville', serif" }}>
-                  <span className="italic">Brief & Strategy</span>
-                </h3>
-                <p className="text-lg font-semibold text-white mb-3">
-                  Understand your campaign goals
-                </p>
+                <ShoppingCart className="w-10 h-10 text-white" />
               </div>
-              <p className="text-slate-300 leading-relaxed">
-                We dig into your target audience, campaign objectives, and key messaging to craft videos that convert.
+              <h3 className="text-xl font-semibold text-white mb-3">E-commerce Brands</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Launching holiday campaigns and need high-quality video ads fast to capture Q4 traffic.
               </p>
             </div>
 
-            {/* Step 2: Production & Editing */}
-            <div className={`bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 md:p-8 hover:border-white/20 transition-all ${processVisible ? 'animate-fadeInUp' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
+            <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 hover:border-white/20 transition-all">
               <div className="mb-4">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-white/10 border border-white/20 mb-4">
-                  <span className="text-2xl font-bold text-white">2</span>
-                </div>
-                <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: "'Libre Baskerville', serif" }}>
-                  <span className="italic">Production & Editing</span>
-                </h3>
-                <p className="text-lg font-semibold text-white mb-3">
-                  Fast, polished video creation
-                </p>
+                <Laptop className="w-10 h-10 text-white" />
               </div>
-              <p className="text-slate-300 leading-relaxed">
-                Scripts, voiceovers, editing, and motion graphics — all delivered with speed and precision to meet your Q4 deadlines.
+              <h3 className="text-xl font-semibold text-white mb-3">SaaS & Tech Companies</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                With year-end ad budgets to spend and need video creative before agencies book up.
               </p>
             </div>
 
-            {/* Step 3: Deliver & Revise */}
-            <div className={`bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 md:p-8 hover:border-white/20 transition-all ${processVisible ? 'animate-fadeInUp' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
+            <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 hover:border-white/20 transition-all">
               <div className="mb-4">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-white/10 border border-white/20 mb-4">
-                  <span className="text-2xl font-bold text-white">3</span>
-                </div>
-                <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: "'Libre Baskerville', serif" }}>
-                  <span className="italic">Deliver & Revise</span>
-                </h3>
-                <p className="text-lg font-semibold text-white mb-3">
-                  Launch-ready assets on time
-                </p>
+                <Target className="w-10 h-10 text-white" />
               </div>
-              <p className="text-slate-300 leading-relaxed">
-                Get your videos in all the formats you need, with revision rounds included to ensure they're campaign-ready.
+              <h3 className="text-xl font-semibold text-white mb-3">Coaches & Consultants</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Running Q4 promos and need professional video assets to stand out in crowded feeds.
+              </p>
+            </div>
+
+            <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 hover:border-white/20 transition-all">
+              <div className="mb-4">
+                <Rocket className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Busy Founders</h3>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Who need assets fast—agencies are booked through January and you can't wait.
               </p>
             </div>
           </div>
@@ -344,53 +330,67 @@ function App() {
       </section>
 
 
-      {/* Who This Is For Section */}
-      <section className="py-12 md:py-24 bg-[#0a0f1a]">
+      {/* Our Process Section */}
+      <section id="process-section" className="py-12 md:py-24 bg-[#0a0f1a]">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="text-center mb-10 md:mb-16">
             <h2 className="text-3xl md:text-5xl mb-4" style={{ fontFamily: "'Libre Baskerville', serif" }}>
-              <span className="italic">Who This Is For</span>
+              <span className="italic">Our Process</span>
             </h2>
           </div>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 hover:border-white/20 transition-all">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 md:gap-8">
+            {/* Step 1: Brief & Strategy */}
+            <div className={`bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 md:p-8 hover:border-white/20 transition-all ${processVisible ? 'animate-fadeInUp' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
               <div className="mb-4">
-                <ShoppingCart className="w-10 h-10 text-white" />
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-white/10 border border-white/20 mb-4">
+                  <span className="text-2xl font-bold text-white">1</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: "'Libre Baskerville', serif" }}>
+                  <span className="italic">Brief & Strategy</span>
+                </h3>
+                <p className="text-lg font-semibold text-white mb-3">
+                  Understand your campaign goals
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">E-commerce Brands</h3>
-              <p className="text-slate-300 text-sm leading-relaxed">
-                Launching holiday campaigns and need high-quality video ads fast to capture Q4 traffic.
+              <p className="text-slate-300 leading-relaxed">
+                We dig into your target audience, campaign objectives, and key messaging to craft videos that convert.
               </p>
             </div>
 
-            <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 hover:border-white/20 transition-all">
+            {/* Step 2: Production & Editing */}
+            <div className={`bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 md:p-8 hover:border-white/20 transition-all ${processVisible ? 'animate-fadeInUp' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
               <div className="mb-4">
-                <Laptop className="w-10 h-10 text-white" />
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-white/10 border border-white/20 mb-4">
+                  <span className="text-2xl font-bold text-white">2</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: "'Libre Baskerville', serif" }}>
+                  <span className="italic">Production & Editing</span>
+                </h3>
+                <p className="text-lg font-semibold text-white mb-3">
+                  Fast, polished video creation
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">SaaS & Tech Companies</h3>
-              <p className="text-slate-300 text-sm leading-relaxed">
-                With year-end ad budgets to spend and need video creative before agencies book up.
+              <p className="text-slate-300 leading-relaxed">
+                Scripts, voiceovers, editing, and motion graphics — all delivered with speed and precision to meet your Q4 deadlines.
               </p>
             </div>
 
-            <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 hover:border-white/20 transition-all">
+            {/* Step 3: Deliver & Revise */}
+            <div className={`bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 md:p-8 hover:border-white/20 transition-all ${processVisible ? 'animate-fadeInUp' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
               <div className="mb-4">
-                <Target className="w-10 h-10 text-white" />
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-white/10 border border-white/20 mb-4">
+                  <span className="text-2xl font-bold text-white">3</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl mb-2" style={{ fontFamily: "'Libre Baskerville', serif" }}>
+                  <span className="italic">Deliver & Revise</span>
+                </h3>
+                <p className="text-lg font-semibold text-white mb-3">
+                  Launch-ready assets on time
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Coaches & Consultants</h3>
-              <p className="text-slate-300 text-sm leading-relaxed">
-                Running Q4 promos and need professional video assets to stand out in crowded feeds.
-              </p>
-            </div>
-
-            <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 hover:border-white/20 transition-all">
-              <div className="mb-4">
-                <Rocket className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Busy Founders</h3>
-              <p className="text-slate-300 text-sm leading-relaxed">
-                Who need assets fast—agencies are booked through January and you can't wait.
+              <p className="text-slate-300 leading-relaxed">
+                Get your videos in all the formats you need, with revision rounds included to ensure they're campaign-ready.
               </p>
             </div>
           </div>
