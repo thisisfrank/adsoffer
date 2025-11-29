@@ -28,6 +28,14 @@ function App() {
 
   const projects: Project[] = [
     {
+      id: 4,
+      title: 'Narrative/Character Videos',
+      description: 'Scripted story with AI-generated presenter or persona. Perfect for storytelling, brand messaging, or creating memorable characters for your campaigns.',
+      tags: ['AI Presenter', 'Storytelling', 'Brand Character'],
+      image: '/Promo Agent Hub Audio Fixed.mp4',
+      images: ['/Promo Agent Hub Audio Fixed.mp4']
+    },
+    {
       id: 1,
       title: 'Screen Share Videos',
       description: 'Walkthrough of your product, software, or service in action. Perfect for demonstrating features, showing your platform, or explaining how something works step-by-step.',
@@ -42,14 +50,6 @@ function App() {
       tags: ['Authentic', 'Social Media', 'Mobile-First'],
       image: '/Transport Portal copy.png',
       images: ['/Transport Portal copy.png']
-    },
-    {
-      id: 4,
-      title: 'Narrative/Character Videos',
-      description: 'Scripted story with AI-generated presenter or persona. Perfect for storytelling, brand messaging, or creating memorable characters for your campaigns.',
-      tags: ['AI Presenter', 'Storytelling', 'Brand Character'],
-      image: '/Promo Agent Hub Audio Fixed.mp4',
-      images: ['/Promo Agent Hub Audio Fixed.mp4']
     }
   ];
 
