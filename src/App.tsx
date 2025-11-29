@@ -33,7 +33,7 @@ function App() {
       description: 'Walkthrough of your product, software, or service in action. Perfect for demonstrating features, showing your platform, or explaining how something works step-by-step.',
       tags: ['Product Demo', 'Software', 'Tutorial'],
       image: '/Shortlist Promo Lofi Audio.mp4',
-      images: ['/Shortlist Promo Lofi Audio.mp4', '/videoframe_18712.png', '/Landing Page.png', '/Admin Control.png']
+      images: ['/Shortlist Promo Lofi Audio.mp4']
     },
     {
       id: 2,
@@ -41,7 +41,7 @@ function App() {
       description: 'Voiceover-driven breakdown of what you do and why it matters. Ideal for introducing your brand, clarifying your value proposition, or educating your audience.',
       tags: ['Voiceover', 'Educational', 'Brand Story'],
       image: '/Inventory Tracker copy.png',
-      images: ['/Inventory Tracker copy.png', '/Inventory Tracker.png', '/Admin Control.png']
+      images: ['/Inventory Tracker copy.png']
     },
     {
       id: 3,
@@ -49,7 +49,7 @@ function App() {
       description: 'Selfie-cam, talking-head format that looks like a real person filmed it on their phone. Great for authentic testimonials, product reviews, or social proof.',
       tags: ['Authentic', 'Social Media', 'Mobile-First'],
       image: '/Transport Portal copy.png',
-      images: ['/Transport Portal copy.png', '/Transport Portal 2.PNG', '/Transport Portal.png']
+      images: ['/Transport Portal copy.png']
     },
     {
       id: 4,
@@ -57,7 +57,7 @@ function App() {
       description: 'Scripted story with AI-generated presenter or persona. Perfect for storytelling, brand messaging, or creating memorable characters for your campaigns.',
       tags: ['AI Presenter', 'Storytelling', 'Brand Character'],
       image: '/videoframe_18712.png',
-      images: ['/videoframe_18712.png', '/Landing Page.png', '/Admin Control.png']
+      images: ['/videoframe_18712.png']
     }
   ];
 
@@ -808,11 +808,11 @@ function App() {
               </div>
             </div>
 
-            <div className="md:w-2/3 overflow-hidden relative flex flex-col">
-              <div className="flex-1 overflow-hidden">
-                {selectedProject.images[currentImageIndex].endsWith('.mp4') ? (
+            <div className="md:w-2/3 overflow-hidden relative">
+              <div className="w-full h-full">
+                {selectedProject.image.endsWith('.mp4') ? (
                   <video
-                    src={selectedProject.images[currentImageIndex]}
+                    src={selectedProject.image}
                     className="w-full h-full object-cover"
                     autoPlay
                     loop
@@ -821,26 +821,11 @@ function App() {
                   />
                 ) : (
                   <img
-                    src={selectedProject.images[currentImageIndex]}
-                    alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
                     className="w-full h-full object-cover"
                   />
                 )}
-              </div>
-
-              <div className="flex justify-center gap-2 py-4 bg-[#0f1419]">
-                {selectedProject.images.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImageIndex(index)}
-                    className={`w-2.5 h-2.5 rounded-full transition-all ${
-                      currentImageIndex === index
-                        ? 'bg-white w-8'
-                        : 'bg-slate-600 hover:bg-slate-500'
-                    }`}
-                    aria-label={`View image ${index + 1}`}
-                  />
-                ))}
               </div>
             </div>
           </div>
