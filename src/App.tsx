@@ -293,11 +293,16 @@ function App() {
                 return (
                   <div
                     key={project.id}
-                    className={`group bg-slate-800/30 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-white/30 transition-all ${projectsVisible ? animationClass : 'opacity-0'}`}
+                    className={`md:col-span-2 lg:col-span-3 group bg-slate-800/30 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-white/30 transition-all ${projectsVisible ? animationClass : 'opacity-0'}`}
                     style={{ animationDelay: '0.2s' }}
                   >
-                    <div className="flex flex-col h-full">
-                      <div className="flex-[2] bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center border-b border-slate-700/50">
+                    <div className="flex flex-col md:flex-row h-full">
+                      <div className="md:w-1/3 p-8 md:p-12 flex items-center justify-center bg-gradient-to-br from-slate-800/50 to-slate-900/50">
+                        <h3 className="text-2xl md:text-4xl text-center" style={{ fontFamily: "'Libre Baskerville', serif" }}>
+                          <span className="italic">{project.title}</span>
+                        </h3>
+                      </div>
+                      <div className="md:w-2/3 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
                         {project.image && project.image.endsWith('.mp4') ? (
                           <video
                             src={project.image}
@@ -314,13 +319,8 @@ function App() {
                             className="w-full h-full object-cover"
                           />
                         ) : (
-                          <div className="text-slate-500 text-sm">Media placeholder</div>
+                          <div className="text-slate-500 text-sm py-24">Media placeholder</div>
                         )}
-                      </div>
-                      <div className="flex-[1] p-6 md:p-8 flex items-center justify-center">
-                        <h3 className="text-xl md:text-2xl text-center" style={{ fontFamily: "'Libre Baskerville', serif" }}>
-                          <span className="italic">{project.title}</span>
-                        </h3>
                       </div>
                     </div>
                   </div>
