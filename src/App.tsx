@@ -48,8 +48,8 @@ function App() {
       title: 'Narrative/Character Videos',
       description: 'Scripted story with AI-generated presenter or persona. Perfect for storytelling, brand messaging, or creating memorable characters for your campaigns.',
       tags: ['AI Presenter', 'Storytelling', 'Brand Character'],
-      image: '/videoframe_18712.png',
-      images: ['/videoframe_18712.png']
+      image: '/Promo Agent Hub Audio Fixed.mp4',
+      images: ['/Promo Agent Hub Audio Fixed.mp4']
     }
   ];
 
