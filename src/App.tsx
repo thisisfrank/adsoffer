@@ -16,6 +16,7 @@ interface Project {
   tags: string[];
   image: string;
   images: string[];
+  customLayout?: boolean;
 }
 
 function App() {
@@ -48,8 +49,17 @@ function App() {
       title: 'UGC-Style Videos',
       description: 'Selfie-cam, talking-head format that looks like a real person filmed it on their phone. Great for authentic testimonials, product reviews, or social proof.',
       tags: ['Authentic', 'Social Media', 'Mobile-First'],
-      image: '/Transport Portal copy.png',
-      images: ['/Transport Portal copy.png']
+      image: '/Arcads - Stocky Gent with Captions.mp4',
+      images: ['/Arcads - Stocky Gent with Captions.mp4']
+    },
+    {
+      id: 5,
+      title: 'Cinematic Quality with Industry Leading Technology',
+      description: '',
+      tags: [],
+      image: '',
+      images: [],
+      customLayout: true
     }
   ];
 
@@ -278,6 +288,44 @@ function App() {
               let animationClass = 'animate-fadeIn';
               if (index === 0) animationClass = 'animate-fadeInSlideRight';
               else if (index === 2) animationClass = 'animate-fadeInSlideLeft';
+
+              if (project.customLayout) {
+                return (
+                  <div
+                    key={project.id}
+                    className={`group bg-slate-800/30 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-white/30 transition-all ${projectsVisible ? animationClass : 'opacity-0'}`}
+                    style={{ animationDelay: '0.2s' }}
+                  >
+                    <div className="flex flex-col h-full">
+                      <div className="flex-[2] bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center border-b border-slate-700/50">
+                        {project.image && project.image.endsWith('.mp4') ? (
+                          <video
+                            src={project.image}
+                            className="w-full h-full object-cover"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                          />
+                        ) : project.image ? (
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <div className="text-slate-500 text-sm">Media placeholder</div>
+                        )}
+                      </div>
+                      <div className="flex-[1] p-6 md:p-8 flex items-center justify-center">
+                        <h3 className="text-xl md:text-2xl text-center" style={{ fontFamily: "'Libre Baskerville', serif" }}>
+                          <span className="italic">{project.title}</span>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
 
               return (
                 <div
