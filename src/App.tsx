@@ -33,31 +33,31 @@ function App() {
       title: 'Narrative/Character Videos',
       description: 'Scripted story with AI-generated presenter or persona. Perfect for storytelling, brand messaging, or creating memorable characters for your campaigns.',
       tags: ['AI Presenter', 'Storytelling', 'Brand Character'],
-      image: '/Promo Agent Hub Audio Fixed.mp4',
-      images: ['/Promo Agent Hub Audio Fixed.mp4']
+      image: 'https://stknifycnhcwezasxrgm.supabase.co/storage/v1/object/public/videos/promo-agent-hub.mp4',
+      images: ['https://stknifycnhcwezasxrgm.supabase.co/storage/v1/object/public/videos/promo-agent-hub.mp4']
     },
     {
       id: 1,
       title: 'Screen Share Videos',
       description: 'Walkthrough of your product, software, or service in action. Perfect for demonstrating features, showing your platform, or explaining how something works step-by-step.',
       tags: ['Product Demo', 'Software', 'Tutorial'],
-      image: '/Shortlist Promo Lofi Audio.mp4',
-      images: ['/Shortlist Promo Lofi Audio.mp4']
+      image: 'https://stknifycnhcwezasxrgm.supabase.co/storage/v1/object/public/videos/shortlist-promo.mp4',
+      images: ['https://stknifycnhcwezasxrgm.supabase.co/storage/v1/object/public/videos/shortlist-promo.mp4']
     },
     {
       id: 3,
       title: 'UGC-Style Videos',
       description: 'Selfie-cam, talking-head format that looks like a real person filmed it on their phone. Great for authentic testimonials, product reviews, or social proof.',
       tags: ['Authentic', 'Social Media', 'Mobile-First'],
-      image: '/UGC2.mp4',
-      images: ['/UGC2.mp4']
+      image: 'https://stknifycnhcwezasxrgm.supabase.co/storage/v1/object/public/videos/ugc2.mp4',
+      images: ['https://stknifycnhcwezasxrgm.supabase.co/storage/v1/object/public/videos/ugc2.mp4']
     },
     {
       id: 5,
       title: 'Cinematic Quality with Industry Leading Technology',
       description: '',
       tags: [],
-      image: '',
+      image: 'https://stknifycnhcwezasxrgm.supabase.co/storage/v1/object/public/videos/path8.mp4',
       images: [],
       customLayout: true
     }
