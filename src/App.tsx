@@ -561,7 +561,7 @@ function App() {
                   <span className="italic">Small Batch</span>
                 </h3>
                 <p className="text-slate-400 mb-4 text-sm md:text-base">
-                  3 core assets • 7-day delivery
+                  2 core assets • 7-day delivery
                 </p>
                 <div className="flex items-baseline gap-2">
                   <span className="text-4xl md:text-5xl font-bold">$2,500</span>
@@ -575,14 +575,11 @@ function App() {
               <div className="space-y-3">
                 <p className="font-semibold text-white mb-3 text-sm md:text-base">What's included:</p>
                 {[
-                  '3 videos (up to 45 seconds each)',
-                  'Screen share walkthrough',
-                  'Explainer with voiceover',
-                  'Script outline included',
-                  'Professional voiceover',
-                  'Polished edit & export',
+                  '2 videos (up to 45 seconds each)',
+                  'Full scripting service',
                   '1 revision round',
-                  '7-day delivery'
+                  '7-day delivery',
+                  'Style options: Screen share walkthrough OR Explainer with voiceover'
                 ].map((feature, index) => (
                   <div key={index} className="flex items-start gap-2">
                     <Check className="w-4 h-4 md:w-5 md:h-5 text-white flex-shrink-0 mt-0.5" />
@@ -617,13 +614,10 @@ function App() {
                 <p className="font-semibold text-white mb-3 text-sm md:text-base">What's included:</p>
                 {[
                   '4 videos (up to 45 seconds each)',
-                  'UGC-style authentic videos',
-                  'Narrative/character storytelling',
                   'Full scripting service',
-                  'AI voiceover integration',
-                  'Motion graphics & logo animation',
                   '2 revision rounds',
-                  '14-day delivery'
+                  '14-day delivery',
+                  'Style options: Screen share walkthrough, Explainer with voiceover, UGC-style authentic videos, OR Narrative/character storytelling'
                 ].map((feature, index) => (
                   <div key={index} className="flex items-start gap-2">
                     <Check className="w-4 h-4 md:w-5 md:h-5 text-white flex-shrink-0 mt-0.5" />
