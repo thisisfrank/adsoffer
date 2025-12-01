@@ -33,31 +33,31 @@ function App() {
       title: 'Narrative/Character Videos',
       description: 'Scripted story with AI-generated presenter or persona. Perfect for storytelling, brand messaging, or creating memorable characters for your campaigns.',
       tags: ['AI Presenter', 'Storytelling', 'Brand Character'],
-      image: 'https://stknifycnhcwezasxrgm.supabase.co/storage/v1/object/public/videos/promo-agent-hub.mp4',
-      images: ['https://stknifycnhcwezasxrgm.supabase.co/storage/v1/object/public/videos/promo-agent-hub.mp4']
+      image: 'https://res.cloudinary.com/dsl86jjuk/video/upload/v1764569117/Agent_Hub_lut1x6.mp4',
+      images: ['https://res.cloudinary.com/dsl86jjuk/video/upload/v1764569117/Agent_Hub_lut1x6.mp4']
     },
     {
       id: 1,
       title: 'Screen Share Videos',
       description: 'Walkthrough of your product, software, or service in action. Perfect for demonstrating features, showing your platform, or explaining how something works step-by-step.',
       tags: ['Product Demo', 'Software', 'Tutorial'],
-      image: 'https://stknifycnhcwezasxrgm.supabase.co/storage/v1/object/public/videos/shortlist-promo.mp4',
-      images: ['https://stknifycnhcwezasxrgm.supabase.co/storage/v1/object/public/videos/shortlist-promo.mp4']
+      image: 'https://res.cloudinary.com/dsl86jjuk/video/upload/v1764569024/Shortlist_Promo_Lofi_Audio_et4pyu.mp4',
+      images: ['https://res.cloudinary.com/dsl86jjuk/video/upload/v1764569024/Shortlist_Promo_Lofi_Audio_et4pyu.mp4']
     },
     {
       id: 3,
       title: 'UGC-Style Videos',
       description: 'Selfie-cam, talking-head format that looks like a real person filmed it on their phone. Great for authentic testimonials, product reviews, or social proof.',
       tags: ['Authentic', 'Social Media', 'Mobile-First'],
-      image: 'https://stknifycnhcwezasxrgm.supabase.co/storage/v1/object/public/videos/ugc2.mp4',
-      images: ['https://stknifycnhcwezasxrgm.supabase.co/storage/v1/object/public/videos/ugc2.mp4']
+      image: 'https://res.cloudinary.com/dsl86jjuk/video/upload/v1764569241/Arcads_-_Stocky_Gent_with_Captions_1_g4yazi.mp4',
+      images: ['https://res.cloudinary.com/dsl86jjuk/video/upload/v1764569241/Arcads_-_Stocky_Gent_with_Captions_1_g4yazi.mp4']
     },
     {
       id: 5,
       title: 'Cinematic Quality with Industry Leading Technology',
       description: '',
       tags: [],
-      image: 'https://stknifycnhcwezasxrgm.supabase.co/storage/v1/object/public/videos/path8.mp4',
+      image: 'https://res.cloudinary.com/dsl86jjuk/video/upload/v1764568668/PATH_8_1_sfgai8.mp4',
       images: [],
       customLayout: true
     }
