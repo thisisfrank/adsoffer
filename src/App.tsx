@@ -293,7 +293,8 @@ function App() {
                 return (
                   <div
                     key={project.id}
-                    className={`md:col-span-2 lg:col-span-3 group bg-slate-800/30 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-white/30 transition-all ${projectsVisible ? animationClass : 'opacity-0'}`}
+                    onClick={() => setSelectedProject(project)}
+                    className={`md:col-span-2 lg:col-span-3 group bg-slate-800/30 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-white/30 transition-all cursor-pointer ${projectsVisible ? animationClass : 'opacity-0'}`}
                     style={{ animationDelay: '0.2s' }}
                   >
                     <div className="flex flex-col md:flex-row h-full">
