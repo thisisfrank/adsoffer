@@ -39,7 +39,7 @@ function App() {
     },
     {
       id: 4,
-      title: 'Narrative/Character Videos',
+      title: 'Narrative or Character Based Videos',
       description: 'Scripted story with AI-generated presenter or persona. Perfect for storytelling, brand messaging, or creating memorable characters for your campaigns.',
       tags: ['AI Presenter', 'Storytelling', 'Brand Character'],
       image: 'https://res.cloudinary.com/dsl86jjuk/video/upload/v1764569117/Agent_Hub_lut1x6.mp4',
