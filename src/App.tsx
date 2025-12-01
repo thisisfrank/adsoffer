@@ -309,7 +309,6 @@ function App() {
                             className="w-full h-full object-cover"
                             autoPlay
                             loop
-                            muted
                             playsInline
                           />
                         ) : project.image ? (
@@ -341,7 +340,6 @@ function App() {
                         className="w-full h-full object-cover"
                         autoPlay
                         loop
-                        muted
                         playsInline
                       />
                     ) : (
@@ -794,7 +792,6 @@ function App() {
                     className="w-full h-full object-cover"
                     autoPlay
                     loop
-                    muted
                     playsInline
                   />
                 ) : (
