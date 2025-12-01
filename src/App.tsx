@@ -30,7 +30,7 @@ function App() {
   const projects: Project[] = [
     {
       id: 5,
-      title: 'ROI Optimized Content',
+      title: 'Cinematic Quality with Industry Leading Technology',
       description: '',
       tags: [],
       image: 'https://res.cloudinary.com/dsl86jjuk/video/upload/v1764568668/PATH_8_1_sfgai8.mp4',
@@ -279,7 +279,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="text-center mb-8 md:mb-16">
             <h2 className="text-3xl md:text-5xl mb-4" style={{ fontFamily: "'Libre Baskerville', serif" }}>
-              <span className="italic">Featured Projects</span>
+              <span className="italic">ROI Optimized Content</span>
             </h2>
           </div>
 
