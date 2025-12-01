@@ -49,8 +49,8 @@ function App() {
       title: 'UGC-Style Videos',
       description: 'Selfie-cam, talking-head format that looks like a real person filmed it on their phone. Great for authentic testimonials, product reviews, or social proof.',
       tags: ['Authentic', 'Social Media', 'Mobile-First'],
-      image: '/Arcads - Stocky Gent with Captions.mp4',
-      images: ['/Arcads - Stocky Gent with Captions.mp4']
+      image: '/UGC2.mp4',
+      images: ['/UGC2.mp4']
     },
     {
       id: 5,
