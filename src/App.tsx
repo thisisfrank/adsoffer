@@ -29,6 +29,15 @@ function App() {
 
   const projects: Project[] = [
     {
+      id: 5,
+      title: 'ROI Optimized Content',
+      description: '',
+      tags: [],
+      image: 'https://res.cloudinary.com/dsl86jjuk/video/upload/v1764568668/PATH_8_1_sfgai8.mp4',
+      images: [],
+      customLayout: true
+    },
+    {
       id: 4,
       title: 'Narrative/Character Videos',
       description: 'Scripted story with AI-generated presenter or persona. Perfect for storytelling, brand messaging, or creating memorable characters for your campaigns.',
@@ -51,15 +60,6 @@ function App() {
       tags: ['Authentic', 'Social Media', 'Mobile-First'],
       image: 'https://res.cloudinary.com/dsl86jjuk/video/upload/v1764569241/Arcads_-_Stocky_Gent_with_Captions_1_g4yazi.mp4',
       images: ['https://res.cloudinary.com/dsl86jjuk/video/upload/v1764569241/Arcads_-_Stocky_Gent_with_Captions_1_g4yazi.mp4']
-    },
-    {
-      id: 5,
-      title: 'Cinematic Quality with Industry Leading Technology',
-      description: '',
-      tags: [],
-      image: 'https://res.cloudinary.com/dsl86jjuk/video/upload/v1764568668/PATH_8_1_sfgai8.mp4',
-      images: [],
-      customLayout: true
     }
   ];
 
