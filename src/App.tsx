@@ -1,4 +1,4 @@
-import { Code2, Check, Star, Mail, ChevronDown, X, Shield, ShoppingCart, Laptop, Target, Rocket, TrendingUp, DollarSign, Zap, Clock } from 'lucide-react';
+import { Code2, Check, Star, Mail, ChevronDown, X, Shield, ShoppingCart, Laptop, Target, Rocket, TrendingUp, DollarSign, Zap, Clock, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import ProprietaryDevelopment from './ProprietaryDevelopment';
 import GuaranteeModal from './GuaranteeModal';
@@ -50,8 +50,11 @@ function App() {
       title: 'Screen Share Videos',
       description: 'Walkthrough of your product, software, or service in action. Perfect for demonstrating features, showing your platform, or explaining how something works step-by-step.',
       tags: ['Product Demo', 'Software', 'Tutorial'],
-      image: 'https://res.cloudinary.com/dsl86jjuk/video/upload/v1764569024/Shortlist_Promo_Lofi_Audio_et4pyu.mp4',
-      images: ['https://res.cloudinary.com/dsl86jjuk/video/upload/v1764569024/Shortlist_Promo_Lofi_Audio_et4pyu.mp4']
+      image: 'https://res.cloudinary.com/dsl86jjuk/video/upload/v1764647450/Shortlist_Promo_2_Audio_qmmuwk.mp4',
+      images: [
+        'https://res.cloudinary.com/dsl86jjuk/video/upload/v1764647450/Shortlist_Promo_2_Audio_qmmuwk.mp4',
+        'https://res.cloudinary.com/dsl86jjuk/video/upload/v1764647645/Forterra_Promo_beitj8.mp4'
+      ]
     },
     {
       id: 3,
@@ -789,9 +792,10 @@ function App() {
 
             <div className="md:w-2/3 overflow-hidden relative">
               <div className="w-full h-full">
-                {selectedProject.image.endsWith('.mp4') ? (
+                {selectedProject.images[currentImageIndex]?.endsWith('.mp4') ? (
                   <video
-                    src={selectedProject.image}
+                    key={selectedProject.images[currentImageIndex]}
+                    src={selectedProject.images[currentImageIndex]}
                     className="w-full h-full object-cover"
                     autoPlay
                     loop
@@ -799,12 +803,40 @@ function App() {
                   />
                 ) : (
                   <img
-                    src={selectedProject.image}
+                    src={selectedProject.images[currentImageIndex]}
                     alt={selectedProject.title}
                     className="w-full h-full object-cover"
                   />
                 )}
               </div>
+
+              {selectedProject.images.length > 1 && (
+                <>
+                  <button
+                    onClick={() => setCurrentImageIndex((prev) => (prev - 1 + selectedProject.images.length) % selectedProject.images.length)}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-slate-800/80 hover:bg-slate-700 rounded-full transition-colors"
+                  >
+                    <ChevronLeft className="w-6 h-6 text-white" />
+                  </button>
+                  <button
+                    onClick={() => setCurrentImageIndex((prev) => (prev + 1) % selectedProject.images.length)}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-slate-800/80 hover:bg-slate-700 rounded-full transition-colors"
+                  >
+                    <ChevronRight className="w-6 h-6 text-white" />
+                  </button>
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                    {selectedProject.images.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentImageIndex(index)}
+                        className={`w-2 h-2 rounded-full transition-colors ${
+                          index === currentImageIndex ? 'bg-white' : 'bg-white/40 hover:bg-white/60'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>
